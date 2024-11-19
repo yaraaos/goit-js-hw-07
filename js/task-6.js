@@ -30,6 +30,8 @@ createBtn.addEventListener('click', () => {
 function createBoxes(amount){
   boxesEl.innerHTML = '';
 
+  const fragment = document.createDocumentFragment();
+
   for (let i = 0; i < amount; i++){
     const box = document.createElement('div');
     const size = 30 + i * 10;
@@ -38,8 +40,9 @@ function createBoxes(amount){
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
 
-    boxesEl.appendChild(box);
+    fragment.appendChild(box);
   }
+  boxesEl.appendChild(fragment);
 }
 
 destroyBtn.addEventListener('click', destroyBoxes);

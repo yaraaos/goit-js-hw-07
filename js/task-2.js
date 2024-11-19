@@ -17,7 +17,7 @@ const createGalleryCard = imageInfo => {
   return `
   <li class = "gallery-item">
     <a href = "#">
-      <img src="${imageInfo.url}" alt="${imageInfo.alt}" width="300" height="200">
+      <img src="${imageInfo.url}" alt="${imageInfo.alt}" width="360" height="300">
     </a>
   </li>
   `;
